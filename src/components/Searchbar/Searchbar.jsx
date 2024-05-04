@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import css from './Searchbar.module.css'
 import { useState } from 'react';
 
-export const Searchbar = ({ onSubmit }) => {
+export const Searchbar = ({ handleValue }) => {
     const [searchedValue, setSearchedValue] = useState('');
 
     const handleSearchedValue = async (e) => {
         e.preventDefault();
         //Don't fetch data on button submit if searchedValue is empty
-        if (searchedValue.length >0) {
-        await onSubmit(searchedValue);
+        //if (searchedValue.length >0) {
+         handleValue(searchedValue);
         setSearchedValue("")            
-        };
+        //};
     }
     
     return (
