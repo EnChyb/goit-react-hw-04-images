@@ -7,11 +7,8 @@ export const Searchbar = ({ handleValue }) => {
 
     const handleSearchedValue = async (e) => {
         e.preventDefault();
-        //Don't fetch data on button submit if searchedValue is empty
-        //if (searchedValue.length >0) {
-         handleValue(searchedValue);
+        handleValue(searchedValue);
         setSearchedValue("")            
-        //};
     }
     
     return (
